@@ -1,0 +1,156 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: url('ai-background.jpg') no-repeat center center fixed; /* AI 주제 이미지 */
+    background-size: cover; /* 이미지를 화면에 꽉 차게 */
+    color: #ffffff; /* 흰색 텍스트 */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(10, 37, 64, 0.7); /* 어두운 반투명 레이어 */
+    z-index: 1;
+}
+
+.content, nav {
+    position: relative;
+    z-index: 2; /* 텍스트와 섹션이 반투명 레이어 위에 오도록 */
+}
+
+/* Navigation Bar */
+nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: rgba(10, 37, 64, 0.8); /* 투명도를 적용한 네이비색 네비게이션 */
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #ffffff; /* 흰색 텍스트 */
+    font-weight: bold;
+}
+
+nav .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ffffff; /* 흰색 로고 텍스트 */
+}
+
+/* Content Sections */
+.content {
+    width: 80%;
+    margin-top: 40px;
+    padding: 40px;
+    background-color: rgba(255, 255, 255, 0.9); /* 투명도가 있는 흰색 배경 */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    text-align: center;
+    margin-bottom: 40px;
+    color: #0a2540; /* 텍스트는 네이비색 */
+}
+
+h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #0a2540; /* 짙은 네이비 텍스트 */
+}
+
+p {
+    font-size: 18px;
+    color: #333333; /* 어두운 회색 텍스트 */
+    margin-bottom: 20px;
+}
+
+/* Project Section */
+.project-grid {
+    display: flex;
+    justify-content: space-between;
+}
+
+.project-card {
+    width: 30%;
+    padding: 20px;
+    background-color: #0a2540; /* 짙은 네이비 카드 배경 */
+    color: white; /* 흰색 텍스트 */
+    border-radius: 10px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.project-card h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.project-card p {
+    font-size: 16px;
+}
+
+.project-card:nth-child(3) {
+    background-color: #ff6600; /* 오렌지색 카드 배경 */
+}
+
+@media (max-width: 768px) {
+    .project-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .project-card {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+}
+
+/* Skills Section */
+ul {
+    list-style-type: none;
+    text-align: left;
+    font-size: 18px;
+    color: #333333; /* 어두운 회색 텍스트 */
+}
+
+ul li {
+    margin-bottom: 10px;
+}
+
+/* Footer */
+#contact {
+    background-color: #ff6600; /* 오렌지색 배경 */
+    padding: 40px;
+    color: white;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .content {
+        width: 90%;
+    }
+}
